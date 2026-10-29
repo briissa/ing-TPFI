@@ -1,0 +1,14 @@
+@startuml
+title Estados de una suscripción Observer
+
+[*] --> Desconectado
+Desconectado --> SolicitandoSuscripcion : conectar y enviar subscribe
+SolicitandoSuscripcion --> Suscripto : solicitud aceptada y auditada
+SolicitandoSuscripcion --> Desconectado : conexión o envío fallido
+Suscripto --> Suscripto : recibir notificación de cambio
+Suscripto --> Desconectado : socket cerrado o error de lectura
+Desconectado --> EsperandoReintento : configurar reintento
+EsperandoReintento --> SolicitandoSuscripcion : vence intervalo
+EsperandoReintento --> [*] : cancelación manual
+Suscripto --> [*] : cancelación manual
+@enduml

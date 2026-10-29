@@ -1,0 +1,39 @@
+@startuml
+title Gestión de get, set y list en el servidor (Proxy)
+
+start
+:Aceptar conexión TCP;
+:Leer y decodificar solicitud JSON;
+if (¿JSON es objeto con UUID?) then (sí)
+  :Crear contexto con UUID y sesión;
+  switch (ACTION)
+    case (get)
+      if (¿ID presente?) then (sí)
+        :Registrar auditoría get con ID;
+        :Delegar lectura al servicio real;
+        :Responder registro o error;
+      else (no)
+        :Responder error de validación;
+      endif
+    case (set)
+      if (¿ID y campos válidos?) then (sí)
+        :Registrar auditoría set con ID;
+        :Delegar actualización al servicio real;
+        :Responder registro actualizado;
+        :Notificar observadores suscriptos;
+      else (no)
+        :Responder error de validación;
+      endif
+    case (list)
+      :Registrar auditoría list;
+      :Delegar consulta al servicio real;
+      :Responder todos los registros;
+    case (otro)
+      :Responder error de acción desconocida;
+  endswitch
+else (no)
+  :Responder error de solicitud;
+endif
+:Cerrar conexión de solicitud;
+stop
+@enduml
