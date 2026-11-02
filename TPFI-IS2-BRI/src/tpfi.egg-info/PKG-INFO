@@ -1,9 +1,0 @@
-Metadata-Version: 2.4
-Name: tpfi
-Version: 0.1.0
-Summary: TPFI IS2: servidor Proxy/Singleton/Observer sobre AWS DynamoDB
-License: MIT
-Requires-Python: >=3.10
-License-File: LICENSE
-Requires-Dist: boto3
-Dynamic: license-file
