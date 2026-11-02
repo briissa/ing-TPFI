@@ -1,0 +1,25 @@
+LICENSE
+README.md
+pyproject.toml
+src/tpfi/__init__.py
+src/tpfi/common.py
+src/tpfi/jsonio.py
+src/tpfi/observer.py
+src/tpfi/observer_client.py
+src/tpfi/server.py
+src/tpfi/service.py
+src/tpfi/singleton_client.py
+src/tpfi/storage.py
+src/tpfi.egg-info/PKG-INFO
+src/tpfi.egg-info/SOURCES.txt
+src/tpfi.egg-info/dependency_links.txt
+Conviene iniciar antes el Observer para que se vea la notificación.
+
+Comprobar el resultado con get y list:
+
+get-prueba.json usa el mismo ID que set-prueba.json. list muestra todos los registros de la tabla.
+src/tpfi.egg-info/entry_points.txt
+src/tpfi.egg-info/requires.txt
+src/tpfi.egg-info/top_level.txt
+tests/test_aceptacion.py
+tests/test_humo.py

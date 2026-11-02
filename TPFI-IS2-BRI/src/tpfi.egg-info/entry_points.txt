@@ -1,0 +1,4 @@
+[console_scripts]
+singleton-get = tpfi.singleton_client:main_get
+singleton-list = tpfi.singleton_client:main_list
+singleton-set = tpfi.singleton_client:main_set

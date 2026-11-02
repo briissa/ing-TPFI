@@ -1,0 +1,16 @@
+# Dependencia de ejecución
+boto3>=1.35
+
+# Pruebas y cobertura
+pytest>=8.0
+pytest-cov>=5.0
+
+# Formato, análisis estático y seguridad
+ruff>=0.9
+black>=24.0
+mypy>=1.13
+pyright>=1.1
+bandit>=1.7
+
+# Documentación API
+pdoc>=14.0

@@ -1,0 +1,16 @@
+{
+  "UUID": "cpu--test",
+  "ID": "TPFI-4bfe19036e0341d3a64208ccdc0c14eb",
+  "ACTION": "set",
+  "cp": "3262",
+  "CUIT": "30-70925411-8",
+  "domicilio": "25 de Mayo 385",
+  "idreq": "473",
+  "idSeq": "1146",
+  "localidad": "Concepción del Uruguay",
+  "provincia": "Entre Ríos",
+  "sede": "FCyT",
+  "seqID": "23",
+  "telefono": "03442 43-1442",
+  "web": "http://www.uader.edu.ar"
+}
